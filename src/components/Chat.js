@@ -44,15 +44,18 @@ const Home = (props) => {
   // }
   return (
     <>
+    <div style={{backgroundColor:'white',border:"6px radius black"}}>
+
       {/* logout button will eventually be in a dropdown next to username */}
-      <Button className={classes.logout} onClick={handleLogout}>
+      {/* <Button className={classes.logout} onClick={handleLogout}>
         Logout
-      </Button>
+      </Button> */}
       <Grid container component='main' className={classes.root}>
         <CssBaseline />
         <SidebarContainer />
         <ActiveChat />
       </Grid>
+      </div>
     </>
   );
 };

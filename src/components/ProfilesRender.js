@@ -8,13 +8,6 @@ import { useSelector } from 'react-redux';
 
 export default function ProfilesRender() {
 
-    // const [user,setUser] = useState(null);
-
-    // useEffect(()=>{
-
-    // },[])
-  
-
     const user = useSelector((state) => state.user);
 
         

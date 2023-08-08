@@ -1,0 +1,46 @@
+.body22 {
+    /* margin: 0; */
+    /* height: 100vh; */
+    /* background-color: #222; */
+    display: inline;
+    font-family: arial;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+  
+  .card22 {
+    display: flex;
+    align-items: center;
+margin: 5px 0 0 15px;
+    border-radius: 100px;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0;
+    /* transition: box-shadow 300ms ease; */
+  }
+  /* .card22:hover {
+    box-shadow: 0 10px 30px 10px rgba(0, 0, 0, 0.7);
+  } */
+  .avatar {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .image22 {
+    margin-right: 20px;
+    display: block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+  
+  .name22 {
+    margin-left: 15px;
+    /* font-size: 30x; */
+    /* border-bottom: 1px solid #ccc; */
+  }
+  
+  .job {
+    font-size: 20px;
+  }

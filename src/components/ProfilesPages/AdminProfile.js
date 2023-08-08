@@ -10,12 +10,17 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import cookie from "react-cookies";
 import { useSelector } from 'react-redux';
+import { MDBIcon, MDBTabs,MDBTabsItem,
+  MDBTabsLink,MDBTabsContent, MDBTabsPane,MDBRow, MDBCol} from 'mdb-react-ui-kit';
+import Chat from '../Chat';
+import Header from '../Header';
+import Footer from '../Footer';
+import AdminMessageCards from '../AdminMessageCards';
+import InformationProfilePages from '../InformationProfilePages';
+import FixedBottomNavigation from '../CardsNavigation'
 const token = cookie.load("token")
 
-
 export default function AdminProfile() {
-
-
   const [allusers, setAllusers] = useState([]);
 
   const getAllusers = async () => {
@@ -31,30 +36,18 @@ export default function AdminProfile() {
   }
 
   const deleteUser = async (userID) => {
-     let deleteuser = await axios.delete(`http://localhost:3001/auth/users/${userID}`,
+    let deleteuser = await axios.delete(`http://localhost:3001/auth/users/${userID}`,
       {
         headers: {
           authorization: `Bearer ${token}`,
         },
       });
-      console.log('deleteuser',deleteuser);
-
-  //  useEffect(()=>{
+    console.log('deleteuser', deleteuser);
     getAllusers();
-  //  },[deleteuser])
   }
+
   useEffect(() => {
     getAllusers();
-    // axios.get(`http://localhost:3003/users`,
-    //   {
-    //     headers: {
-    //       authorization: `Bearer ${loginContext.user.token}`,
-    //     },
-    //   }).then((res)=>{
-    //     setAllusers(res.data)
-    //     console.log('getUsers', res.data);
-
-    //   })
 
     console.log('all users', allusers);
   }, [])
@@ -78,6 +71,9 @@ export default function AdminProfile() {
 
     return color;
   }
+
+  const [iconsActive, setIconsActive] = useState('tab1');
+
   function stringAvatar(name) {
     console.log('name', name);
     return {
@@ -88,51 +84,140 @@ export default function AdminProfile() {
     };
   }
 
+  const handleIconsClick = (value) => {
+    if (String(value) === iconsActive) {
+      return;
+    }
+
+    setIconsActive(value);
+  };
+
   return (
-    <div>
+    <> 
+      <div className='background-white'>
 
-      Admin Profile page!!
-      {allusers.map((user, idx) => {
-        if (user.role !== 'admin') {
-          return (
-            <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-              <ListItem alignItems="flex-start" key={idx}>
-                <ListItemAvatar>
-                  <Stack direction="row" spacing={2}>
-                    <Avatar {...stringAvatar(`${user.username}`)} />
-                  </Stack>
-                </ListItemAvatar>
-                <ListItemText
-                  primary={user.id}
-                  secondary={
-                    <React.Fragment>
-                      <Typography
-                        sx={{ display: 'inline' }}
-                        component="span"
-                        variant="body2"
-                        color="text.primary" >
-                        {user.username}
-                        <br />
-                      </Typography>
-                      role: {user.role}
-                    </React.Fragment>
-                  } />
-                  <button 
-                  onClick={() => { deleteUser(user.id) }}
-                  >
-                  delete
+        <Header />
 
-                  </button>
-                {/* <Button onClick={() => { petsContext.deletePet(item.id) }}>
+        <InformationProfilePages/>
+        <div style={{ backgroundColor: 'white' }}>
 
-                  delete
-                </Button> */}
-              </ListItem>
-              <Divider variant="inset" component="li" />
-            </List>)
-        }
-      })}
-      <br /><br /><br />
-    </div>
+          <MDBTabs className='mb-3'>
+            <MDBTabsItem>
+              <MDBTabsLink onClick={() => handleIconsClick('tab1')} active={iconsActive === 'tab1'}>
+                <MDBIcon fas icon="user-friends" /> users
+              </MDBTabsLink>
+            </MDBTabsItem>
+
+            <MDBTabsItem>
+              <MDBTabsLink onClick={() => handleIconsClick('tab2')} active={iconsActive === 'tab2'}>
+                <MDBIcon fas icon="comment" /> chat
+              </MDBTabsLink>
+            </MDBTabsItem>
+
+            <MDBTabsItem>
+              <MDBTabsLink onClick={() => handleIconsClick('tab3')} active={iconsActive === 'tab3'}>
+              <i class="fas fa-envelope"></i> Messages
+              </MDBTabsLink>
+            </MDBTabsItem>
+          </MDBTabs>
+
+          <MDBTabsContent>
+            <MDBTabsPane show={iconsActive === 'tab1'}>
+            <section class="title container" style={{marginTop:'5px',marginBottom:'30px'}}>
+    {/* <div class="row"> */}
+        {/* <div class="col-md-12"> */}
+            <h1>All Users</h1>
+            <div class="seperator"></div>
+         
+        {/* </div> */}
+    {/* </div> */}
+</section>
+            <MDBRow className='row-cols-1 row-cols-md-4 g-2'>
+
+              {allusers.map((user, idx) => {
+                if (user.role !== 'admin') {
+                  return (
+                    <MDBCol>
+                    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                      <ListItem alignItems="flex-start" key={idx}>
+                      {user.photoUrl?(
+                      //  <div className='body22'>
+                       <div class="card22"> 
+                         <img src={user.photoUrl} alt="Avatar" class="avatar" style={{marginRight:'30px'}} />
+                         {/* <div> */}
+                         
+                         {/* </div> */}
+                       </div>
+                    //  {/* </div> */}
+
+                      )
+                      :
+                      (
+                        <div style={{marginLeft:"10px"}}>
+
+                        <ListItemAvatar>
+                        <Stack direction="row" spacing={2}>
+                          <Avatar {...stringAvatar(`${user.username}`)} />
+                        </Stack>
+                      </ListItemAvatar>
+                        </div>
+                     
+                      )
+                    }
+
+                        <ListItemText
+                          primary={user.id}
+                          secondary={
+                            <React.Fragment>
+                              <Typography
+                                sx={{ display: 'inline' }}
+                                component="span"
+                                variant="body2"
+                                color="text.primary" >
+                                {user.username}
+                                <br />
+                              </Typography>
+                              role: {user.role}
+                            </React.Fragment>
+                          } />
+
+                        <button type="submit" class="btn btn-primary btn-rounded   btn-sm"
+                          data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}
+                          onClick={() => { deleteUser(user.id) }}
+                        >
+                          delete
+                        </button>
+
+                      </ListItem>
+                      <Divider variant="inset" component="li" />
+                    </List>
+                    
+                      </MDBCol>
+                    )
+                }
+              })}
+              </MDBRow>
+              </MDBTabsPane>
+            <MDBTabsPane show={iconsActive === 'tab2'}>
+
+              <Chat />
+            </MDBTabsPane>
+
+            <MDBTabsPane show={iconsActive === 'tab3'}>
+
+            
+{/* <FixedBottomNavigation/> */}
+            <AdminMessageCards/>
+            </MDBTabsPane>
+          </MDBTabsContent>
+
+
+
+          <br /><br /><br />
+        </div>
+
+        <Footer />
+      </div>
+    </>
   )
 }
