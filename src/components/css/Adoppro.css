@@ -1,0 +1,41 @@
+.titleAdop { color: #752121; font-family: 'Open Sans',
+     sans-serif; font-size: 34px; font-weight: 300;
+      line-height: 40px; margin: 0 0 16px;
+       font-weight: bold;}
+
+
+.h2title { color: #752121; font-family: 'Open Sans',
+     sans-serif; font-size: 24px;
+      font-weight: 300; line-height: 32px; margin: 0 0 14px; font-weight: bold;}
+
+
+.paragAdop { color: #222; font-family: 'Open Sans', sans-serif;
+     font-size: 20px; font-weight: 400;
+      line-height: 24px; margin: 0 0 14px; }
+
+.allConta{
+    margin-left: 100px;
+    margin-right: 60px;
+}
+
+.titleAdop2{
+    
+    color: #ec3257; font-family: 'Open Sans', sans-serif; font-size: 40px; font-weight: 300; line-height: 40px; margin: 0 0 16px; font-style:initial; font-weight: bold;
+}
+
+
+.wrapperr3 {
+    background-image: url('../images/3853637.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    /* margin-top: 80px;
+    margin-bottom: 80px; */
+}.wrapperr4 {
+    background-image: url('../images/3848416.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    /* margin-top: 80px;
+    margin-bottom: 80px; */
+}

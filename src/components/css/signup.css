@@ -1,0 +1,64 @@
+/* body {
+} */
+
+.wrapperr {
+    background-image: url('../images/4.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    /* margin-top: 80px;
+    margin-bottom: 80px; */
+}
+
+.form-signup {
+
+    max-width: 380px;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-signup .form-signup-heading,
+.form-signup .checkbox {
+    margin-bottom: 30px;
+}
+
+.form-signup .checkbox {
+    font-weight: normal;
+}
+
+.form-signup .form-control {
+    position: relative;
+    margin: 10px;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signup .form-control:focus {
+    z-index: 2;
+}
+
+.form-signup input[type=text] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.form-signup input[type=password] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+.hover-underline-animation :hover{
+
+        text-decoration: underline;
+    
+  }
+  

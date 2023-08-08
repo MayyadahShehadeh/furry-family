@@ -8,9 +8,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "red",
     fontWeight: "bold"
   },
-  icon: {
-    color: "white"
-  }
+  // icon: {
+  //   color: "white"
+  // }
 }));
 
 const SnackbarError = (props) => {

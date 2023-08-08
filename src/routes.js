@@ -13,6 +13,11 @@ import Header from './components/Header';
 import Footer from './components/Footer'
 import DogsRenders from "./components/petsPages/DogsRenders";
 import CatsRender from "./components/petsPages/CatsRender";
+import Adopt from "./components/Adopt";
+import Aboutus from "./components/Aboutus";
+import CareAfterAdoption from "./components/CareAfterAdoption";
+import Contactus from "./components/Contactus";
+import AdoptionProcess from "./components/AdoptionProcess";
 
 const Routes = (props) => {
   const { user, fetchUser } = props;
@@ -48,7 +53,7 @@ const Routes = (props) => {
           snackBarOpen={snackBarOpen}
         />
       )}
-      <Header/>
+      {/* <Header/> */}
       <Switch>
         <Route path="/login" component={Login} />
         <Route path="/register" component={Signup} />
@@ -57,6 +62,16 @@ const Routes = (props) => {
         <Route path="/profile" component={ProfilesRender} />
         <Route path="/dogs" component={DogsRenders} />
         <Route path="/cats" component={CatsRender} />
+        <Route path="/adopt" component={Adopt} />
+        <Route path="/aboutus" component={Aboutus} />
+        <Route path="/careafteradoption" component={CareAfterAdoption} />
+        <Route path="/contactus" component={Contactus} />
+
+        <Route path="/process" component={AdoptionProcess} />
+
+
+
+
 
 
         {/* <Route
@@ -65,7 +80,7 @@ const Routes = (props) => {
         > </Route> */}
         <Route path="/" component={Home} />
       </Switch>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 };

@@ -7,135 +7,134 @@ import {
 import { logout, fetchConversations } from '../store/utils/thunkCreators';
 import { clearOnLogout } from '../store/index';
 import { useSelector, useDispatch } from 'react-redux';
-import logoimg from './images/logo.png';
+import logoimg from './images/preview.png';
+
 export default function Header(props) {
     const user = useSelector((state) => state.user);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [showNav, setShowNav] = useState(false);
+    const [showNavRight, setShowNavRight] = useState(false);
 
-console.log('user:::',user);
-console.log('isLoggedIn:::',isLoggedIn);
+    console.log('user:::', user);
+    console.log('isLoggedIn:::', isLoggedIn);
 
     const dispatch = useDispatch();
     const handleLogout = () => {
         dispatch(logout(user.id));
         dispatch(clearOnLogout());
         console.log('you logout');
-      };
+    };
 
-
-      useEffect(() => {
+    useEffect(() => {
         setIsLoggedIn(true);
-      }, [user?.id]);
+    }, [user?.id]);
 
-  return (
-    <div>
-        
-        <div >
+    return (
+        <div>
+            <div >
 
-<MDBNavbar expand='lg' light bgColor='light' fixed  >
-    <MDBContainer fluid>
-        <MDBNavbarBrand href='/'>
-            <img
-            style={{marginLeft:'50px'}}
-                src={logoimg}
-            height='70'
-            alt=''
-            loading='lazy'
-            />
-        </MDBNavbarBrand>
-        <MDBNavbarToggler
-            type='button'
-            aria-expanded='false'
-            aria-label='Toggle navigation'
-            onClick={() => setShowNav(!showNav)}>
+                {/* --------------------------------------------------------- */}
+                <MDBNavbar expand='lg' fixed className='bg-transparent shadow-1-strong text-dark text-danger' >
+                    <MDBContainer fluid>
+                        <MDBNavbarBrand href='/'>
+                            <img
+                                style={{ marginLeft: '50px' }}
+                                src={logoimg}
+                                height='40x'
+                                alt=''
+                                loading='lazy'
+                            />
+                        </MDBNavbarBrand>
+                        <MDBNavbarToggler
+                            type='button'
+                            aria-expanded='false'
+                            aria-label='Toggle navigation'
+                            onClick={() => setShowNav(!showNav)}>
 
-        </MDBNavbarToggler>
-
-
-        <div className='ms-auto'>
+                        </MDBNavbarToggler>
 
 
-            <MDBCollapse navbar show={showNav} style={{ justifyContent: 'center' }}  >
-                <MDBNavbarNav>
-                    <MDBNavbarItem>
-                        <MDBNavbarLink href='/'>
-                            Home
-                        </MDBNavbarLink>
-                    </MDBNavbarItem>
-                    <MDBNavbarItem>
-                        <MDBNavbarLink href='/chat'>
-                            chat
-                        </MDBNavbarLink>
-                    </MDBNavbarItem>
-                    <MDBNavbarItem>
-                        <MDBNavbarLink href='/cats'>
-                            Cats
-                        </MDBNavbarLink>
-                    </MDBNavbarItem>
-                     <MDBNavbarItem>
-                        <MDBNavbarLink href='/dogs'>
-                            Dogs
-                        </MDBNavbarLink>
-                    </MDBNavbarItem>
+                        <div className='ms-auto' >
 
-                    {user.id ?
-
-                        <MDBDropdown group className='shadow-0'>
-                            <MDBDropdownToggle color='link'>
-                                <MDBIcon fas icon="user" />
-
-
-                            </MDBDropdownToggle>
-                            <MDBDropdownMenu>
-
-                           
-                           
-                                <MDBDropdownItem link>
-                                    <MDBNavbarItem >
-                                      
-                                           {/* {ContextLogin.user.user.username} */}
-                                       <br/>
-                                       {/* {ContextLogin.loggedIn} */}
-                                    </MDBNavbarItem>
-                                </MDBDropdownItem>
-
-                                <MDBDropdownItem link>
-                                    <MDBNavbarItem >
-                                      
-                                        <MDBNavbarLink  href='/profile'>
-                                            Profile
+                            <MDBCollapse navbar show={showNav} style={{ justifyContent: 'center' }}  >
+                                <MDBNavbarNav>
+                                    <MDBNavbarItem>
+                                        <MDBNavbarLink href='/' >
+                                            Home
                                         </MDBNavbarLink>
                                     </MDBNavbarItem>
-                                </MDBDropdownItem>
+                                    <MDBNavbarItem>
+                                        <MDBDropdown>
+                                            <MDBDropdownToggle tag='a' className='nav-link' role='button'>
+                                                Adopt
+                                            </MDBDropdownToggle>
+                                            <MDBDropdownMenu>
+                                                <MDBDropdownItem link href='/cats'>Cats</MDBDropdownItem>
+                                                <MDBDropdownItem link href='/dogs'>Dogs</MDBDropdownItem>
+                                            </MDBDropdownMenu>
+                                        </MDBDropdown>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem>
+                                        <MDBNavbarLink href='/process' >
+                                             Process
+                                        </MDBNavbarLink>
+                                    </MDBNavbarItem>
+                                    
+                                    <MDBNavbarItem>
+                                        <MDBNavbarLink href='/careafteradoption' >
+                                            Care
+                                        </MDBNavbarLink>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem>
+                                        <MDBNavbarLink href='/contactus' >
+                                            Contact
+                                        </MDBNavbarLink>
+                                    </MDBNavbarItem>
+                                    <MDBNavbarItem>
+                                        <MDBNavbarLink href='/aboutus' >
+                                            About us
+                                        </MDBNavbarLink>
+                                    </MDBNavbarItem>
+                                   
 
-                             
-                                <MDBDropdownItem link onClick={handleLogout}>
-                                    Log Out
-                                </MDBDropdownItem>
+                                    {user.id ?
 
-                            </MDBDropdownMenu>
-                        </MDBDropdown>
-                        :
-                        <MDBNavbarItem>
-                            <MDBNavbarLink href='/sign' >Sign in</MDBNavbarLink>
+                                        <MDBDropdown group className='shadow-0'>
+                                            <MDBDropdownToggle color='link' style={{color:'#ed1e4d'}}>
+                                                <MDBIcon fas icon="user" style={{color:'#ed1e4d'}}/>
 
 
-                        </MDBNavbarItem>
-                     } 
-                </MDBNavbarNav>
-            </MDBCollapse>
+                                            </MDBDropdownToggle>
+                                            <MDBDropdownMenu>
+
+                                                <MDBDropdownItem link>
+                                                    <MDBNavbarItem >
+
+                                                        <MDBNavbarLink href='/profile'>
+                                                            Profile
+                                                        </MDBNavbarLink>
+                                                    </MDBNavbarItem>
+                                                </MDBDropdownItem>
+
+
+                                                <MDBDropdownItem link onClick={handleLogout}>
+                                                    Log Out
+                                                </MDBDropdownItem>
+
+                                            </MDBDropdownMenu>
+                                        </MDBDropdown>
+                                        :
+                                        <MDBNavbarItem>
+                                            <MDBNavbarLink href='/sign' >Sign in</MDBNavbarLink>
+
+                                        </MDBNavbarItem>
+                                    }
+                                </MDBNavbarNav>
+                            </MDBCollapse>
+                        </div>
+                    </MDBContainer>
+                </MDBNavbar>
+            </div>
         </div>
-
-
-
-
-
-        {/* <img alt="imag" className="header-user-pic" src={imagelogo} /> */}
-
-    </MDBContainer>
-</MDBNavbar>
-</div>
-  </div>
-  )
+    )
 }

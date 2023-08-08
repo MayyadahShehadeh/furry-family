@@ -2,14 +2,16 @@ import React from "react";
 import { Redirect, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import {
-  Grid,
-  Box,
-  Typography,
-  Button,
-  FormControl,
-  TextField,
+  MDBContainer, MDBCol, MDBRow, MDBBtn,
+  MDBIcon, MDBInput, MDBCheckbox
+} from 'mdb-react-ui-kit';
+import {
+  Grid, Box, Typography, Button, FormControl, TextField,
 } from "@material-ui/core";
 import { login } from "./store/utils/thunkCreators";
+import catimg1 from './components/images/3853933.jpg'
+import './components/css/login.css'
+
 
 const Login = (props) => {
   const history = useHistory();
@@ -28,41 +30,66 @@ const Login = (props) => {
   }
 
   return (
-    <Grid container justify="center">
-      <Box>
-        <Grid container item>
-          <Typography>Need to register?</Typography>
-          <Button onClick={() => history.push("/register")}>Register</Button>
-        </Grid>
-        <form onSubmit={handleLogin}>
-          <Grid>
-            <Grid>
+
+    <div>
+      <div class="wrapper">
+<br/><br/><br/><br/><br/><br/>
+    <form class="form-signin" onSubmit={handleLogin}>       
+      <h2 class="form-signin-heading" style={{textAlign:'center', paddingTop:'10px'}}> Login</h2>
+      <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
+      <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"/> Remember me
+      </label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" 
+      style={{backgroundColor:'#ed1e4d',boxShadow:'#ed1e4d',msScrollbarShadowColor:'#ed1e4d'}}>Login</button>  
+      <div style={{display:'inline'}}>
+        <p>Don't Have an Account ?
+                  <Button className="hover-underline-animation" onClick={() => history.push("/register")}>Register</Button>
+                  </p></div>
+ 
+    </form>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  </div> 
+      {/* ------------------------------------- */}
+      {/* <Grid container justify="center"> */}
+        {/* <Box>
+          <Grid container item>
+            <Typography>Need to register?</Typography>
+            <Button onClick={() => history.push("/register")}>Register</Button>
+          </Grid> */}
+          {/* <form onSubmit={handleLogin}> */}
+            {/* <Grid>
+              <Grid>
+                <FormControl margin="normal" required>
+                  <TextField
+                    aria-label="username"
+                    label="Username"
+                    name="username"
+                    type="text"
+                  />
+                </FormControl>
+              </Grid>
               <FormControl margin="normal" required>
                 <TextField
-                  aria-label="username"
-                  label="Username"
-                  name="username"
-                  type="text"
+                  label="password"
+                  aria-label="password"
+                  type="password"
+                  name="password"
                 />
               </FormControl>
-            </Grid>
-            <FormControl margin="normal" required>
-              <TextField
-                label="password"
-                aria-label="password"
-                type="password"
-                name="password"
-              />
-            </FormControl>
-            <Grid>
-              <Button type="submit" variant="contained" size="large">
-                Login
-              </Button>
-            </Grid>
-          </Grid>
-        </form>
-      </Box>
-    </Grid>
+              <Grid>
+                <Button type="submit" variant="contained" size="large">
+                  Login
+                </Button>
+              </Grid>
+            </Grid> */}
+          {/* </form> */}
+        {/* </Box>
+      </Grid> */}
+      {/* </div> */}
+    </div>
+
   );
 };
 
