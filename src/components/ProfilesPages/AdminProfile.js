@@ -24,7 +24,7 @@ export default function AdminProfile() {
   const [allusers, setAllusers] = useState([]);
 
   const getAllusers = async () => {
-    const getUsers = await axios.get(`http://localhost:3001/auth/users`,
+    const getUsers = await axios.get(`https://furry-family-backend-production.up.railway.app/auth/users`,
       {
         headers: {
           authorization: `Bearer ${token}`,
@@ -36,7 +36,7 @@ export default function AdminProfile() {
   }
 
   const deleteUser = async (userID) => {
-    let deleteuser = await axios.delete(`http://localhost:3001/auth/users/${userID}`,
+    let deleteuser = await axios.delete(`https://furry-family-backend-production.up.railway.app/auth/users/${userID}`,
       {
         headers: {
           authorization: `Bearer ${token}`,

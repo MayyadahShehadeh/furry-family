@@ -60,7 +60,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "http://localhost:3001",
+  "proxy": "https://furry-family-backend-production.up.railway.app",
   "browserslist": {
     "production": [
       ">0.2%",

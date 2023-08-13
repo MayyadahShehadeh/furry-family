@@ -26,7 +26,7 @@ export default function PetFinderProfile() {
   const [showAlert, setshowAlert] = useState(false);
 
   const getAllFavPets = async () => {
-    const getFavPet = await axios.get(`http://localhost:3001/api/v2/favpets`,
+    const getFavPet = await axios.get(`https://furry-family-backend-production.up.railway.app/api/v2/favpets`,
       {
         headers: {
           authorization: `Bearer ${token}`,
@@ -41,7 +41,7 @@ export default function PetFinderProfile() {
   }, []);
   
   const deleteFavoritePet = async (petID) => {
-    let deletPet = await axios.delete(`http://localhost:3001/api/v2/favpets/${petID}`, {
+    let deletPet = await axios.delete(`https://furry-family-backend-production.up.railway.app/api/v2/favpets/${petID}`, {
       headers: {
         authorization: `Bearer ${token}`,
       },
@@ -64,7 +64,7 @@ export default function PetFinderProfile() {
       
     }
     let userID = user.id;
-    let userData = await axios.put(`http://localhost:3001/auth/users/${userID}`, userInputs,
+    let userData = await axios.put(`https://furry-family-backend-production.up.railway.app/auth/users/${userID}`, userInputs,
       {
         headers: {
           authorization: `Bearer ${token}`,

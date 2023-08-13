@@ -19,7 +19,7 @@ const [allPets,setallPets] = useState([]);
 
 
   const getAllPets = async () => {
-    axios.get(`http://localhost:3001/api/v2/pets`).then((res) => {
+    axios.get(`https://furry-family-backend-production.up.railway.app/api/v2/pets`).then((res) => {
         // console.log('dogs database', res.data);
         setallPets(res.data)
 
@@ -29,7 +29,7 @@ const [allPets,setallPets] = useState([]);
 }
 
 useEffect(() => {
-
+ 
     getAllPets();
 
 }, []);

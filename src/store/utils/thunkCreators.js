@@ -12,6 +12,7 @@ import { gotUser, setFetchingStatus } from '../user';
 axios.interceptors.request.use(async function (config) {
   // Needs update!!! localStorage.getItem is not async
   const token = await localStorage.getItem('messenger-token');
+  console.log('messenger tokeennnnn :::', token);
   config.headers['x-access-token'] = token;
 
   return config;

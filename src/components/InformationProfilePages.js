@@ -38,7 +38,7 @@ export default function AdminMessageCards() {
         setShow(true)
     }
     const deleteUser = async (userID) => {
-        let deleteuser = await axios.delete(`http://localhost:3001/auth/users/${userID}`,
+        let deleteuser = await axios.delete(`https://furry-family-backend-production.up.railway.app/auth/users/${userID}`,
             {
                 headers: {
                     authorization: `Bearer ${token}`,

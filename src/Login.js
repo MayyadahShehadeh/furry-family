@@ -1,15 +1,9 @@
 import React from "react";
 import { Redirect, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
-import {
-  MDBContainer, MDBCol, MDBRow, MDBBtn,
-  MDBIcon, MDBInput, MDBCheckbox
-} from 'mdb-react-ui-kit';
-import {
-  Grid, Box, Typography, Button, FormControl, TextField,
-} from "@material-ui/core";
+
+import {Button} from "@material-ui/core";
 import { login } from "./store/utils/thunkCreators";
-import catimg1 from './components/images/3853933.jpg'
 import './components/css/login.css'
 
 

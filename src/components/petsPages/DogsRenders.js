@@ -70,7 +70,7 @@ export default function DogsRenders({ socket }) {
     }
     console.log(petInfo);
 
-    const addPetData = await axios.post(`http://localhost:3001/api/v2/favpets`, petInfo,
+    const addPetData = await axios.post(`https://furry-family-backend-production.up.railway.app/api/v2/favpets`, petInfo,
       {
         headers: {
           authorization: `Bearer ${token}`,
