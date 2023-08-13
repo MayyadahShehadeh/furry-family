@@ -81,7 +81,7 @@ export default function PetOwnerProfile() {
       phone: e.target.phone.value,
     }
     let userID = user.id;
-    let userData = await axios.put(`http://localhost:3001/auth/users/${userID}`, userInputs,
+    let userData = await axios.put(`https://furry-family-backend-production.up.railway.app/auth/users/${userID}`, userInputs,
       {
         headers: {
           authorization: `Bearer ${token}`,

@@ -2,30 +2,7 @@ import React, { useState } from "react";
 import { Redirect, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { Form } from 'react-bootstrap';
-import {
-  MDBBtn,
-  MDBContainer,
-  MDBCard,
-  MDBCardBody,
-  MDBCol,
-  MDBRow,
-  MDBInput,
-  MDBCheckbox,
-  MDBIcon
-}
-  from 'mdb-react-ui-kit';
-import {
-  Grid,
-  Box,
-  Typography,
-  Button,
-  FormControl,
-  TextField,
-  FormHelperText,
-} from "@material-ui/core";
-// import InputLabel from '@mui/material/InputLabel';
-// import MenuItem from '@mui/material/MenuItem';
-// import Select from '@mui/material/Select';
+import { Button,FormHelperText,} from "@material-ui/core";
 import { register } from "./store/utils/thunkCreators";
 import './components/css/signup.css'
 

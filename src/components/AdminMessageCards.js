@@ -14,7 +14,7 @@ export default function AdminMessageCards() {
   const [allmsgs, setAllmsgs] = useState([]);
 const getAllMsgs = async () =>{
 
-  const getMsgs = await axios.get(`http://localhost:3001/api/v2/contactus`,
+  const getMsgs = await axios.get(`https://furry-family-backend-production.up.railway.app/api/v2/contactus`,
       {
         headers: {
           authorization: `Bearer ${token}`,
@@ -30,7 +30,7 @@ const getAllMsgs = async () =>{
   }, [])
 
   const deleteMessage = async(userID) =>{
-    let deleteMsg = await axios.delete(`http://localhost:3001/api/v2/contactus/${userID}`,{
+    let deleteMsg = await axios.delete(`https://furry-family-backend-production.up.railway.app/api/v2/contactus/${userID}`,{
       headers: {
         authorization: `Bearer ${token}`,
     }, })

@@ -7,13 +7,9 @@ import Login from "./Login.js";
 import { SnackbarError } from "./components";
 import Home from "./components/Home.js";
 import Sign from "./Sign";
-import Chat from "./components/Chat";
 import ProfilesRender from "./components/ProfilesRender";
-import Header from './components/Header';
-import Footer from './components/Footer'
 import DogsRenders from "./components/petsPages/DogsRenders";
 import CatsRender from "./components/petsPages/CatsRender";
-import Adopt from "./components/Adopt";
 import Aboutus from "./components/Aboutus";
 import CareAfterAdoption from "./components/CareAfterAdoption";
 import Contactus from "./components/Contactus";
@@ -62,7 +58,7 @@ const Routes = (props) => {
         <Route path="/profile" component={ProfilesRender} />
         <Route path="/dogs" component={DogsRenders} />
         <Route path="/cats" component={CatsRender} />
-        <Route path="/adopt" component={Adopt} />
+        {/* <Route path="/adopt" component={Adopt} /> */}
         <Route path="/aboutus" component={Aboutus} />
         <Route path="/careafteradoption" component={CareAfterAdoption} />
         <Route path="/contactus" component={Contactus} />

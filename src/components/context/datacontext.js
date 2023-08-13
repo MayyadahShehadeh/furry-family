@@ -29,7 +29,7 @@ export default function PetsDataProvider(props) {
     }
 
     const getAllPets = async () => {
-        axios.get(`http://localhost:3001/api/v2/pets`).then((res) => {
+        axios.get(`https://furry-family-backend-production.up.railway.app/api/v2/pets`).then((res) => {
             // console.log('dogs database', res.data);
             setallPets(res.data)
 
@@ -67,7 +67,7 @@ export default function PetsDataProvider(props) {
             photoUrl:user.photoUrl
         }
         console.log(petInfo);
-        const addPetData = await axios.post(`http://localhost:3001/api/v2/pets`, petInfo,
+        const addPetData = await axios.post(`https://furry-family-backend-production.up.railway.app/api/v2/pets`, petInfo,
             {
                 headers: {
                     authorization: `Bearer ${token}`,
@@ -80,7 +80,7 @@ export default function PetsDataProvider(props) {
     }
 
     const deletePet = async (petID) => {
-        let deletPet = await axios.delete(`http://localhost:3001/api/v2/pets/${petID}`, {
+        let deletPet = await axios.delete(`https://furry-family-backend-production.up.railway.app/api/v2/pets/${petID}`, {
             headers: {
                 authorization: `Bearer ${token}`,
             },
@@ -110,7 +110,7 @@ export default function PetsDataProvider(props) {
             gender:gender
         }
         let petID = selectedPet.id;
-        let catData = await axios.put(`http://localhost:3001/api/v2/pets/${petID}`, petInputs,
+        let catData = await axios.put(`https://furry-family-backend-production.up.railway.app/api/v2/pets/${petID}`, petInputs,
             {
                 headers: {
                     authorization: `Bearer ${token}`,

@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom';
 import { Modal } from 'react-bootstrap'
 import {
   MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle,
-  MDBCardText, MDBRow, MDBCol, MDBCardFooter
+   MDBRow, MDBCol
 } from 'mdb-react-ui-kit';
 import { PetsDataContext } from '../context/datacontext';
 import { useSelector } from 'react-redux';
 import { When } from 'react-if';
-import { Alert, Button } from 'react-bootstrap'
+import { Alert } from 'react-bootstrap'
 import Header from '../Header';
 import Footer from '../Footer';
-import { Card, CardHeader, CardBody, CardFooter, Avatar, Box, Image, Flex, Heading, Text, IconButton, BiLike } from '@chakra-ui/react'
+// import { Card, CardHeader, CardBody, CardFooter, Avatar, Box, Image, Flex,
+//    Heading, Text, IconButton, BiLike } from '@chakra-ui/react'
 import '../css/petscards.css'
 import axios from 'axios';
 import cookie from "react-cookies";
@@ -82,7 +83,7 @@ export default function DogsRenders() {
     }
     console.log(petInfo);
 
-    const addPetData = await axios.post(`http://localhost:3001/api/v2/favpets`, petInfo,
+    const addPetData = await axios.post(`https://furry-family-backend-production.up.railway.app/api/v2/favpets`, petInfo,
       {
         headers: {
           authorization: `Bearer ${token}`,
