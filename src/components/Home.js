@@ -24,6 +24,7 @@ export default function Home() {
   return (
     <>
     <Header/>
+<div style={{backgroundColor:"white"}}>
     <Carousel fade>
       <Carousel.Item>
       <img
@@ -77,6 +78,7 @@ export default function Home() {
     <CardSlider/>
     <HomeCards/>
     <Stat/>
+</div>
     <Footer/>
     </>
   //   <div>

@@ -98,6 +98,7 @@ export default function DogsRenders({ socket }) {
 
   return (
     <>
+          <div style={{backgroundColor:"white"}}>
       <Header />
       {/* ----------------- alert ----------------------- */}
       <Breadcrumb style={{ marginLeft: '170px', marginTop: '30px' }}>
@@ -119,7 +120,7 @@ export default function DogsRenders({ socket }) {
       </div>
       {/* ---------------------------- */}
       <div style={{ marginLeft: '140px', marginRight: '140px', marginTop: '30px' }}>
-
+        
         {/* ----------------------------- SHOW CONTACT OWNER INFORMATION IN MODAL ---------------- */}
         <Modal show={show} onHide={handleClose}>
           <form >
@@ -136,7 +137,7 @@ export default function DogsRenders({ socket }) {
 
                 <button type="button" className="btn btn-primary btn-rounded   btn-sm"
                   data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}>
-                  go chat {dogOwnerName}
+                    go chat {dogOwnerName}
                 </button>
               </Link>
             </Modal.Body>
@@ -206,12 +207,13 @@ export default function DogsRenders({ socket }) {
                 // <p>
                 //     {item.breed}
                 // </p>
-              )
-            }
+                )
+              }
           })
           }
         </MDBRow>
       </div>
+              </div>
       <Footer />
     </>
   )
