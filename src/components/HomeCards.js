@@ -25,8 +25,9 @@ export default function HomeCards() {
                 }}>
                   <img style={{
                     height: '290px', width: '420px', float: "left",
-                    marginLeft: "10px"
-                  }} src={img5} />
+                    marginLeft: "10px",
+                    
+                  }} src={img5} alt='img1'/>
 
                   <div style={{ float: 'right', marginTop: '30px' }}>
                     <p style={{ fontSize: '18px', marginLeft: '70px' }}>It's the process of transferring responsibility for a pet that was previously owned by another party. Common sources for adoptable pets are animal shelters, rescue groups, or other pet owners. Some organizations give adopters ownership of the pet, while others use a guardianship model wherein the organization retains some control over the animal's future use or care.</p>
@@ -75,7 +76,7 @@ export default function HomeCards() {
                     <img style={{
                       height: '260px', width: '400px', float: "right",
                       marginRight: "10px"
-                    }} src={img4} />
+                    }} src={img4} alt='img2'/>
                   </div>
 
                 </div>

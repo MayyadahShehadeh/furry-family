@@ -17,12 +17,12 @@ export default function Contactus() {
   const [open, setOpen] = React.useState(false);
   const [show, setShow] = React.useState(false);
 
-  const handleOpen = () => setOpen(true);
+  // const handleOpen = () => setOpen(true);
   const handleClose = () => {
     setOpen(false);
     setShow(false)
   }
-  const [rest, setReset] = useState(" ");
+  // const [rest, setReset] = useState(" ");
   const user = useSelector((state) => state.user);
 
   const style = {

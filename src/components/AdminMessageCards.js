@@ -3,8 +3,7 @@ import './css/adminmessagecard.css';
 import axios from 'axios';
 import cookie from "react-cookies";
 
-import {
-  MDBCardText, MDBRow, MDBCol
+import {MDBRow, MDBCol
 } from 'mdb-react-ui-kit';
 
 const token = cookie.load("token")

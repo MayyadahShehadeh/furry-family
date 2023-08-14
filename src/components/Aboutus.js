@@ -5,7 +5,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import './css/Adoppro.css'
 import Footer from './Footer';
 import Header from './Header';
-import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
+import { MDBIcon } from 'mdb-react-ui-kit';
 
 export class Aboutus extends Component {
   render() {

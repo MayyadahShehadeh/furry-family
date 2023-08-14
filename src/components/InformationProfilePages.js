@@ -8,7 +8,7 @@ import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
 import cookie from "react-cookies";
 import Button from '@mui/material/Button';
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const token = cookie.load("token")
 
@@ -152,7 +152,7 @@ export default function AdminMessageCards() {
                                         </div>
                                     </div>
 
-                                    {user.role == 'petowner' || user.role == 'petfinder' ? (
+                                    {user.role === 'petowner' || user.role === 'petfinder' ? (
                                         <div>
                                             <hr />
                                             <div class="row">

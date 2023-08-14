@@ -9,7 +9,7 @@ import store from "./store";
 import { theme } from "./themes/theme";
 import AllRoutes from "./routes";
 import PetsDataProvider from "./components/context/datacontext";
-import { ChakraProvider } from '@chakra-ui/react'
+// import { ChakraProvider } from '@chakra-ui/react'
 
 function App() {
   return (

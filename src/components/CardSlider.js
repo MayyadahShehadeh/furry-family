@@ -1,18 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
-import ReactCardSlider from "react-card-slider-component";
+import React, { useEffect, useState } from "react";
 import "./css/cardSlider.css";
 import Swiper from 'swiper/bundle';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import HoverCards from "./HoverCards";
-import { PetsDataContext } from './context/datacontext';
-import { Card, Button } from 'react-bootstrap'
-import { Redirect, useHistory } from "react-router-dom";
+import { Card } from 'react-bootstrap'
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 function Navbar() {
-  const petsContext = useContext(PetsDataContext);
 
   const history = useHistory();
 const [allPets,setallPets] = useState([]);
@@ -50,14 +46,14 @@ useEffect(() => {
   });
 
   function getDirection() {
-    var windowWidth = window.innerWidth;
+    // var windowWidth = window.innerWidth;
     var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
 
     return direction;
   }
 
   const patsHandler = (item) => {
-    if (item == "cat") {
+    if (item === "cat") {
       history.push("/cats")
 
     } else {

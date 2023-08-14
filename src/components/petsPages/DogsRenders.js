@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Modal } from 'react-bootstrap'
 import { MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBRow, MDBCol, } from 'mdb-react-ui-kit';
-import { Alert, Button } from 'react-bootstrap'
+import { Alert } from 'react-bootstrap'
 import { When } from 'react-if';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -42,7 +42,7 @@ export default function DogsRenders({ socket }) {
 
   }
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleShow = () => setShow(true);
 
   // const addFavorite = (id) => {
   //   petsContext.addFavPet(id)
@@ -81,7 +81,7 @@ export default function DogsRenders({ socket }) {
     setshowAlert(true)
    }
   console.log('allFavor', allFavor);
-  const [userName, setUserName] = useState("")
+  // const [userName, setUserName] = useState("")
 
   // const handleSubmit = () => {
   // socket.emit('newUser', { userName: loginContext.user.user.username,finder_id:loginContext.user.user.id, socketID: socket.id ,
@@ -150,7 +150,7 @@ export default function DogsRenders({ socket }) {
           {console.log('getdbDogs', petsContext.allPets)}
 
           {dogsDatabase.map((item, idx) => {
-            if (item.petType == "dog") {
+            if (item.petType === "dog") {
 
 
               return (
@@ -182,7 +182,7 @@ export default function DogsRenders({ socket }) {
                       <p><b>Breed:</b> {item.breed}</p>
 
 
-                      <When condition={user.capabilities == 'read'}>
+                      <When condition={user.capabilities === 'read'}>
                         {/* <FavoriteBorderOutlinedIcon/>          */}
                         {/* <button onClick={() => { ownerContactInformation(item.id) }}>
                           contact the owner </button> */}

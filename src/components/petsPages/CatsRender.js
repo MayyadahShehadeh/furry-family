@@ -104,7 +104,7 @@ export default function DogsRenders() {
   }, [showAlert]);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleShow = () => setShow(true);
 
   return (
 
@@ -123,7 +123,7 @@ export default function DogsRenders() {
           {/* {console.log('getdbDogs', petsContext.allPets)} */}
 
           {catsDatabase.map((item, idx) => {
-            if (item.petType == "cat") {
+            if (item.petType === "cat") {
 
               return (
                 <MDBCol>
@@ -155,7 +155,7 @@ export default function DogsRenders() {
                       {/* {user.capabilities == 'read' */}
                       <p>{item.description}</p>
                       <p><b>Breed:</b> {item.breed}</p>
-                      <When condition={user.capabilities == 'read'}>
+                      <When condition={user.capabilities === 'read'}>
 
 
                         <button type="button" class="btn btn-primary btn-rounded   btn-sm"

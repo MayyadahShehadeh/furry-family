@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 // import cookie from 'react-cookies';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
@@ -10,14 +10,14 @@ export const PetsDataContext = React.createContext();
 export default function PetsDataProvider(props) {
 
     const user = useSelector((state) => state.user);
-    { console.log('user from context', user); }
+    console.log('user from context', user)
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const [allPets, setallPets] = useState([]);
     const [selectedPet, setselectedPet] = useState([]);
-    const [favoritePet, setfavoritePett] = useState([]);
-    const [allfavoritePet, setallfavoritePet] = useState([]);
+    // const [favoritePet, setfavoritePett] = useState([]);
+    // const [allfavoritePet, setallfavoritePet] = useState([]);
 
     useEffect(() => {
         setIsLoggedIn(true);
@@ -43,7 +43,7 @@ export default function PetsDataProvider(props) {
         getAllPets();
 
     }, []);
-    console.log('allPets', allPets);
+    // console.log('allPets', allPets);
 
     const token = cookie.load("token");
     console.log('token', token);

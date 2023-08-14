@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import React, { useContext, useState } from 'react';
+import { Form } from 'react-bootstrap';
 import { Modal } from 'react-bootstrap'
 import {
   MDBCard, MDBCardImage, MDBCardBody,
-  MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBCardFooter, MDBTabs,
+  MDBCardTitle, MDBRow, MDBCol, MDBTabs,
   MDBTabsItem, MDBTabsLink, MDBTabsContent, MDBTabsPane, MDBIcon
 } from 'mdb-react-ui-kit';
 import { PetsDataContext } from '../context/datacontext';
@@ -22,7 +22,7 @@ export default function PetOwnerProfile() {
   const user = useSelector((state) => state.user);
 
   let [userInputs, setIuserInputs] = useState({})
-  let [catsData, setCatsData] = useState([]);
+  // let [catsData, setCatsData] = useState([]);
 
   let [show, setShow] = useState(false);
  
@@ -260,11 +260,11 @@ export default function PetOwnerProfile() {
                     {/* --------------------------- RENDER USER CATS ------------------- */}
 
                     <MDBRow className='row-cols-1 row-cols-md-4 g-3'>
-                      {console.log('userdb cats', catsData)}
+                      {/* {console.log('userdb cats', catsData)} */}
                       {/* {console.log('user id ', ContextLogin.user.user.id)} */}
                       {petsContext.allPets.map((item, idx) => {
                         // { console.log('catsssss userId:', item.userId) }
-                        if (item.userId == user.id) {
+                        if (item.userId === user.id) {
                           return (
                             <MDBCol >
                               <MDBCard className='h-80' style={{ margin: '10px', textAlign: 'center' }} key={idx}>
