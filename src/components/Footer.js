@@ -6,7 +6,7 @@ export default function App() {
     <>
       {/* <br/> <br/> 
       <br/> <br/>  */}
-      <footer class=" text-center text-white" style={{backgroundColor:"#e6c48e"}}>
+      <footer className=" text-center text-white" style={{backgroundColor:"#e6c48e"}}>
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
         <div className='me-5 d-none d-lg-block'>

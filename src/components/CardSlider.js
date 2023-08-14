@@ -64,24 +64,24 @@ useEffect(() => {
   return (
     <div>
 
-    <section class="title container" style={{marginTop:'75px'}}>
-    {/* <div class="row"> */}
-        {/* <div class="col-md-12"> */}
+    <section className="title container" style={{marginTop:'75px'}}>
+    {/* <div className="row"> */}
+        {/* <div className="col-md-12"> */}
             <h1>Our pets</h1>
-            <div class="seperator"></div>
+            <div className="seperator"></div>
             <p>CHOOSE YOUR FRIEND !</p>
         {/* </div> */}
     {/* </div> */}
 </section>
-    <div class="swiper" style={{ marginTop: 100 }}>
-      <div class="swiper-wrapper">
+    <div className="swiper" style={{ marginTop: 100 }}>
+      <div className="swiper-wrapper">
         {allPets.map((item, idx) => {
           return (
-            <div class="swiper-slide"  >
+            <div className="swiper-slide"  >
 
-              <Card style={{ width: '18rem' }}>
+              <Card style={{ width: '18rem' }} key={idx}>
                 <Card.Body>
-                  <Card.Img variant="top" class="w-100 hover-shadow"
+                  <Card.Img variant="top" className="w-100 hover-shadow"
                     height={190}
                     width={140} src={item.image_link} />
 
@@ -89,7 +89,7 @@ useEffect(() => {
                   <Card.Text style={{fontSize:'16px'}}>
                     {item.description}
                   </Card.Text>
-                  <button type="button" class="btn btn-primary btn-rounded   btn-sm"
+                  <button type="button" className="btn btn-primary btn-rounded   btn-sm"
                   data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}
                   onClick={() => patsHandler(item.petType)}>Adopt Me!</button>
 
@@ -100,8 +100,8 @@ useEffect(() => {
           )
         })}
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <div className="swiper-button-next"></div>
+      <div className="swiper-button-prev"></div>
       <br/><br/>
     </div>
                   </div>

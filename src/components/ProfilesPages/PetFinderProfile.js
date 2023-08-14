@@ -185,7 +185,7 @@ export default function PetFinderProfile() {
                       <Form.Control type="password" placeholder="Password" defaultValue={user.password} name="password" />
                     </Form.Group>
                 <br />
-                <input type="submit" class="btn btn-primary btn-rounded   btn-sm"
+                <input type="submit" className="btn btn-primary btn-rounded   btn-sm"
                   data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}
                   value="update"/>
               </form>   
@@ -234,7 +234,7 @@ export default function PetFinderProfile() {
                                     
                                   <b> owner:</b> {item.petOwnerName}
                                   </p>
-                                  <button type="button" class="btn btn-primary btn-rounded   btn-sm"
+                                  <button type="button" className="btn btn-primary btn-rounded   btn-sm"
                                     data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }} 
                                     onClick={() => { deleteFavoritePet(item.id) }}
                                     >

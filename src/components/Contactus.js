@@ -136,49 +136,49 @@ export default function Contactus() {
         {/* <br /><br /> */}
         <div className='wrapper2' >
 
-          <div class="container2">
-            <div class="content">
-              <div class="left-side">
-                <div class="address details">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <div class="topic">Address</div>
-                  <div class="text-one">Amman, Jordan</div>
-                  <div class="text-two">{" "}</div>
+          <div className="container2">
+            <div className="content">
+              <div className="left-side">
+                <div className="address details">
+                  <i className="fas fa-map-marker-alt"></i>
+                  <div className="topic">Address</div>
+                  <div className="text-one">Amman, Jordan</div>
+                  <div className="text-two">{" "}</div>
                 
                 </div>
-                <div class="phone details">
-                  <i class="fas fa-phone-alt"></i>
-                  <div class="topic">Phone</div>
-                  <div class="text-one">+962 7893 56472</div>
-                  <div class="text-two">{" "}</div>
+                <div className="phone details">
+                  <i className="fas fa-phone-alt"></i>
+                  <div className="topic">Phone</div>
+                  <div className="text-one">+962 7893 56472</div>
+                  <div className="text-two">{" "}</div>
                 </div>
-                <div class="email details">
-                  <i class="fas fa-envelope"></i>
-                  <div class="topic">Email</div>
-                  <div class="text-one">contactus@gmail.com</div>
-                  <div class="text-two">{" "}</div>
+                <div className="email details">
+                  <i className="fas fa-envelope"></i>
+                  <div className="topic">Email</div>
+                  <div className="text-one">contactus@gmail.com</div>
+                  <div className="text-two">{" "}</div>
                 </div>
               </div>
-              <div class="right-side">
-                <div class="topic-text">Send us a message</div>
+              <div className="right-side">
+                <div className="topic-text">Send us a message</div>
                 <p>If you have any work from me or any types of quries related to my tutorial, you can send me message from here. It's my pleasure to help you.</p>
 
 
                 <form action="#" onSubmit={addMessage}>
-                  <div class="input-box">
+                  <div className="input-box">
                     <input type="text" placeholder="Enter your name" defaultValue={user.username} name='name' onChange={handleChange} />
                   </div>
-                  <div class="input-box">
+                  <div className="input-box">
                     <input type="text" placeholder="Enter your email" defaultValue={user.email} name='email' onChange={handleChange} />
                   </div>
-                  <div class="input-box message-box">
+                  <div className="input-box message-box">
                     <label for="message"></label>
                     <textarea id="message" name="message" rows="4" cols="50" placeholder='Enter Your Message' onChange={handleChange}>
 
                     </textarea>
                   </div>
-                  <div class="button">
-                    <input type="submit" value="Send Now" class="btn btn-primary btn-rounded   btn-sm"
+                  <div className="button">
+                    <input type="submit" value="Send Now" className="btn btn-primary btn-rounded   btn-sm"
                       data-mdb-ripple-color="#ffffff"
                       style={{ backgroundColor: "#ec3257", margin: '5px' }} />
 

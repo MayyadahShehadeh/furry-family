@@ -76,104 +76,104 @@ export default function AdminMessageCards() {
 
 
             <section  >
-                <div class="container py-5" >
-                    <div class="row">
-                        <div class="col">
-                            <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4" style={{backgroundColor:'white'}}>
-                                <ol class="breadcrumb mb-0">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="/profile">Profile</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+                <div className="container py-5" >
+                    <div className="row">
+                        <div className="col">
+                            <nav aria-label="breadcrumb" className="bg-light rounded-3 p-3 mb-4" style={{backgroundColor:'white'}}>
+                                <ol className="breadcrumb mb-0">
+                                    <li className="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li className="breadcrumb-item"><a href="/profile">Profile</a></li>
+                                    <li className="breadcrumb-item active" aria-current="page">User Profile</li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="card mb-4">
-                                <div class="card-body text-center">
+                    <div className="row">
+                        <div className="col-lg-4">
+                            <div className="card mb-4">
+                                <div className="card-body text-center">
                                     <img src={user.photoUrl} alt="avatar"
-                                        class="rounded-circle img-fluid" style={{ width: "150px" }} />
-                                    <h5 class="my-3">{user.username}</h5>
-                                    <p class="text-muted mb-1">{user.role}</p>
-                                    {/* <p class="text-muted mb-4">Bay Area, San Francisco, CA</p> */}
-                                    <div class="d-flex justify-content-center mb-2">
-                                        {/* <button type="button" class="btn btn-primary">Follow</button>
-              <button type="button" class="btn btn-outline-primary ms-1">Message</button> */}
+                                        className="rounded-circle img-fluid" style={{ width: "150px" }} />
+                                    <h5 className="my-3">{user.username}</h5>
+                                    <p className="text-muted mb-1">{user.role}</p>
+                                    {/* <p className="text-muted mb-4">Bay Area, San Francisco, CA</p> */}
+                                    <div className="d-flex justify-content-center mb-2">
+                                        {/* <button type="button" className="btn btn-primary">Follow</button>
+              <button type="button" className="btn btn-outline-primary ms-1">Message</button> */}
                                     </div>
                                 </div>
                             </div>
-                            {/* <div class="card mb-4 mb-lg-0"> */}
-                            {/* <div class="card-body p-0">
-            <ul class="list-group list-group-flush rounded-3">
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fas fa-globe fa-lg text-warning"></i>
-                <p class="mb-0">https://mdbootstrap.com</p>
+                            {/* <div className="card mb-4 mb-lg-0"> */}
+                            {/* <div className="card-body p-0">
+            <ul className="list-group list-group-flush rounded-3">
+              <li className="list-group-item d-flex justify-content-between align-items-center p-3">
+                <i className="fas fa-globe fa-lg text-warning"></i>
+                <p className="mb-0">https://mdbootstrap.com</p>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-github fa-lg" style={{color: "#333333"}}></i>
-                <p class="mb-0">mdbootstrap</p>
+              <li className="list-group-item d-flex justify-content-between align-items-center p-3">
+                <i className="fab fa-github fa-lg" style={{color: "#333333"}}></i>
+                <p className="mb-0">mdbootstrap</p>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-twitter fa-lg" style={{color: "#55acee"}}></i>
-                <p class="mb-0">@mdbootstrap</p>
+              <li className="list-group-item d-flex justify-content-between align-items-center p-3">
+                <i className="fab fa-twitter fa-lg" style={{color: "#55acee"}}></i>
+                <p className="mb-0">@mdbootstrap</p>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-instagram fa-lg" style={{color:" #ac2bac"}}></i>
-                <p class="mb-0">mdbootstrap</p>
+              <li className="list-group-item d-flex justify-content-between align-items-center p-3">
+                <i className="fab fa-instagram fa-lg" style={{color:" #ac2bac"}}></i>
+                <p className="mb-0">mdbootstrap</p>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                <i class="fab fa-facebook-f fa-lg" style={{color: "#3b5998"}}></i>
-                <p class="mb-0">mdbootstrap</p>
+              <li className="list-group-item d-flex justify-content-between align-items-center p-3">
+                <i className="fab fa-facebook-f fa-lg" style={{color: "#3b5998"}}></i>
+                <p className="mb-0">mdbootstrap</p>
               </li>
             </ul>
           </div> */}
                             {/* </div> */}
                         </div>
-                        <div class="col-lg-8">
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <p class="mb-0">Full Name</p>
+                        <div className="col-lg-8">
+                            <div className="card mb-4">
+                                <div className="card-body">
+                                    <div className="row">
+                                        <div className="col-sm-3">
+                                            <p className="mb-0">Full Name</p>
                                         </div>
-                                        <div class="col-sm-9">
-                                            <p class="text-muted mb-0">{user.username}</p>
+                                        <div className="col-sm-9">
+                                            <p className="text-muted mb-0">{user.username}</p>
                                         </div>
                                     </div>
                                     <hr />
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <p class="mb-0">Email</p>
+                                    <div className="row">
+                                        <div className="col-sm-3">
+                                            <p className="mb-0">Email</p>
                                         </div>
-                                        <div class="col-sm-9">
-                                            <p class="text-muted mb-0">{user.email}</p>
+                                        <div className="col-sm-9">
+                                            <p className="text-muted mb-0">{user.email}</p>
                                         </div>
                                     </div>
 
                                     {user.role === 'petowner' || user.role === 'petfinder' ? (
                                         <div>
                                             <hr />
-                                            <div class="row">
+                                            <div className="row">
 
-                                                <div class="col-sm-3">
-                                                    <p class="mb-0">phone</p>
+                                                <div className="col-sm-3">
+                                                    <p className="mb-0">phone</p>
                                                 </div>
 
-                                                <div class="col-sm-9">
-                                                    <p class="text-muted mb-0">{user.phone}</p>
+                                                <div className="col-sm-9">
+                                                    <p className="text-muted mb-0">{user.phone}</p>
                                                 </div>
 
                                             </div>
 
                                             <hr />
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <p class="mb-0">Address</p>
+                                            <div className="row">
+                                                <div className="col-sm-3">
+                                                    <p className="mb-0">Address</p>
                                                 </div>
-                                                <div class="col-sm-9">
-                                                    <p class="text-muted mb-0">{user.address}</p>
+                                                <div className="col-sm-9">
+                                                    <p className="text-muted mb-0">{user.address}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -183,7 +183,7 @@ export default function AdminMessageCards() {
 
                                     <hr />
 
-                                    <div class="row">
+                                    <div className="row">
                                         <Button variant="outlined" color="error" onClick={handleOpen}
                                             style={{ width: '200px' }}
                                         >
@@ -194,8 +194,8 @@ export default function AdminMessageCards() {
 
                                 </div>
                             </div>
-                            {/* <div class="row"> */}
-                            {/* <div class="col-md-6">
+                            {/* <div className="row"> */}
+                            {/* <div className="col-md-6">
                                     <div class="card mb-4 mb-md-0"> */}
                             {/* <div class="card-body">
                 <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status

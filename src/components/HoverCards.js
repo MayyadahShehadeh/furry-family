@@ -10,7 +10,7 @@ export default function HoverCards() {
             {petsContext.allPets.map((item, idx) => {
                 return (
 
-                    <Card style={{ width: '18rem' }}>
+                    <Card style={{ width: '18rem' }} key={idx}>
                         <Card.Img variant="top" src="holder.js/100px180" />
                         <Card.Body>
                             <Card.Title>{item.name}</Card.Title>

@@ -16,28 +16,28 @@ export class Aboutus extends Component {
                 <div className='allConta'>
 
         {/* <!-- For demo purpose --> */}
-<div class="container py-5">
-    <div class="row text-center text-white">
-        <div class="col-lg-8 mx-auto">
+<div className="container py-5">
+    <div className="row text-center text-white">
+        <div className="col-lg-8 mx-auto">
             <br/>
-            <h1 class="display-4" style={{color:'black'}}>Members</h1>
+            <h1 className="display-4" style={{color:'black'}}>Members</h1>
         </div>
     </div>
 </div>
 {/* <!-- End --> */}
 
 
-<div class="container">
-    <div class="row text-center">
+<div className="container">
+    <div className="row text-center">
 
         {/* <!-- Team item --> */}
-        <div class="col-xl-3 col-sm-6 mb-5" style={{marginLeft:'400px' , border:'500px black'}}>
-            <div class="bg-white rounded shadow-sm py-5 px-4">
-                <img src={img1} alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"/>
-                <h5 class="mb-0">Mayadah Shehadeh</h5><span class="small text-uppercase text-muted">Software Developer</span>
-                <ul class="social mb-0 list-inline mt-3">
+        <div className="col-xl-3 col-sm-6 mb-5" style={{marginLeft:'400px' , border:'500px black'}}>
+            <div className="bg-white rounded shadow-sm py-5 px-4">
+                <img src={img1} alt="" width="100" className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"/>
+                <h5 className="mb-0">Mayadah Shehadeh</h5><span className="small text-uppercase text-muted">Software Developer</span>
+                <ul className="social mb-0 list-inline mt-3">
                   
-                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/mayyadah-shehadeh-3014b0121/" class="social-link">
+                    <li className="list-inline-item"><a href="https://www.linkedin.com/in/mayyadah-shehadeh-3014b0121/" className="social-link">
                     <MDBIcon fab icon='linkedin-in' />
    </a></li>
                 </ul>
