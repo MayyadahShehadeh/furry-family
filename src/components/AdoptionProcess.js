@@ -1,14 +1,10 @@
 import React from 'react'
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
-import img1 from './images/3848416.jpg'
 import Header from './Header';
 import Footer from './Footer';
 import {
   MDBCard,
-  MDBCardTitle,
-  MDBCardText,
   MDBCardBody,
-  MDBCardHeader
 } from 'mdb-react-ui-kit';
 export default function AdoptionProcess() {
   return (

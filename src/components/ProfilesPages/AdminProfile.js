@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
@@ -9,7 +9,7 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import cookie from "react-cookies";
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { MDBIcon, MDBTabs,MDBTabsItem,
   MDBTabsLink,MDBTabsContent, MDBTabsPane,MDBRow, MDBCol} from 'mdb-react-ui-kit';
 import Chat from '../Chat';
@@ -17,7 +17,7 @@ import Header from '../Header';
 import Footer from '../Footer';
 import AdminMessageCards from '../AdminMessageCards';
 import InformationProfilePages from '../InformationProfilePages';
-import FixedBottomNavigation from '../CardsNavigation'
+// import FixedBottomNavigation from '../CardsNavigation'
 const token = cookie.load("token")
 
 export default function AdminProfile() {

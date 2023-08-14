@@ -1,5 +1,4 @@
-import axios from 'axios';
-import React, { useEffect, useState ,useContext} from 'react'
+import React from 'react'
 import AdminProfile from './ProfilesPages/AdminProfile';
 import PetOwnerProfile from './ProfilesPages/PetOwnerProfile';
 import Home from './Home';
@@ -13,13 +12,13 @@ export default function ProfilesRender() {
         
 
 
-     if (user.role == 'petfinder') {
+     if (user.role === 'petfinder') {
           return <PetFinderProfile/>;
         }
-        if(user.role =='admin') {
+        if(user.role ==='admin') {
             return <AdminProfile />;
         }
-        if (user.role == 'petowner') {
+        if (user.role === 'petowner') {
             return <PetOwnerProfile />;
         }
         return <Home />

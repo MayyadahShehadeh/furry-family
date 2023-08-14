@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import img1 from './images/3853637.jpg'
 import './css/Adoppro.css'
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Accordion from 'react-bootstrap/Accordion';
@@ -7,11 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 import {
   MDBCard,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardBody,
-  MDBCardHeader
-} from 'mdb-react-ui-kit';
+  MDBCardBody} from 'mdb-react-ui-kit';
 
 
 export class CareAfterAdoption extends Component {

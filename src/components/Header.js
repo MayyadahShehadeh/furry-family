@@ -4,7 +4,7 @@ import {
     MDBNavbarToggler, MDBNavbarNav, MDBNavbarItem, MDBNavbarLink, MDBCollapse,
     MDBIcon, MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem
 } from 'mdb-react-ui-kit';
-import { logout, fetchConversations } from '../store/utils/thunkCreators';
+import { logout } from '../store/utils/thunkCreators';
 import { clearOnLogout } from '../store/index';
 import { useSelector, useDispatch } from 'react-redux';
 import logoimg from './images/preview.png';
@@ -13,7 +13,7 @@ export default function Header(props) {
     const user = useSelector((state) => state.user);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [showNav, setShowNav] = useState(false);
-    const [showNavRight, setShowNavRight] = useState(false);
+    // const [showNavRight, setShowNavRight] = useState(false);
 
     console.log('user:::', user);
     console.log('isLoggedIn:::', isLoggedIn);

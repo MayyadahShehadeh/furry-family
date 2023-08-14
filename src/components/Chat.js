@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { Grid, CssBaseline, Button } from '@material-ui/core';
+import { Grid, CssBaseline } from '@material-ui/core';
 import { SidebarContainer } from './Sidebar';
 import { ActiveChat } from './ActiveChat';
-import { logout, fetchConversations } from '../store/utils/thunkCreators';
-import { clearOnLogout } from '../store/index';
+import { 
+  // logout, 
+  fetchConversations } from '../store/utils/thunkCreators';
+// import { clearOnLogout } from '../store/index';
 
 const styles = {
   root: {
@@ -19,11 +21,11 @@ const Home = (props) => {
 
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
-{console.log('userrr' , user);}
-  const handleLogout = () => {
-    dispatch(logout(user.id));
-    dispatch(clearOnLogout());
-  };
+console.log('userrr' , user)
+  // const handleLogout = () => {
+  //   dispatch(logout(user.id));
+  //   dispatch(clearOnLogout());
+  // };
 
   useEffect(() => {
     dispatch(fetchConversations());
