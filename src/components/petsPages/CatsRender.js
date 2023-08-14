@@ -109,7 +109,9 @@ export default function DogsRenders() {
   return (
 
     <>
+      <div style={{backgroundColor:"white"}}>
       <Header />
+
       <div style={{ marginLeft: '140px', marginRight: '140px', marginTop: '30px' }}>
       <Breadcrumb style={{marginLeft:'35px',marginTop:'30px'}}>
          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
@@ -210,7 +212,7 @@ export default function DogsRenders() {
 
               <button type="button" className="btn btn-primary btn-rounded   btn-sm"
                 data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}
-              >
+                >
                 go chat {catOwnerName}
               </button>
             </Link>
@@ -230,16 +232,16 @@ export default function DogsRenders() {
         {/* <MDBRow className='row-cols-1 row-cols-md-4 g-4'> */}
         {/* {console.log('all catsssss:', allCats)} */}
         {/* {catsDatabase.map((item, idx) => {
-        return (
-          
-          
-          <MDBCol >
-          <MDBCard className='h-100' style={{ margin: '10px' }}>
-          <MDBCardImage
-                  src={item.image_link}
-                  alt='...'
-                  position='top'
-                /> */}
+          return (
+            
+            
+            <MDBCol >
+            <MDBCard className='h-100' style={{ margin: '10px' }}>
+            <MDBCardImage
+            src={item.image_link}
+            alt='...'
+            position='top'
+          /> */}
         {/* <MDBCardBody>
                   <MDBCardTitle>{item.name}</MDBCardTitle>
                 */}
@@ -258,6 +260,7 @@ export default function DogsRenders() {
 
       </div>
 
+</div>
       <Footer />
     </>
   )

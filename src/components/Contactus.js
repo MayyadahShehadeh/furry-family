@@ -74,9 +74,9 @@ export default function Contactus() {
 
   return (
     <>
+      <div style={{ backgroundColor: "white" }}>
       <Header />
       <div>
-
       <Breadcrumb style={{marginLeft:'170px',marginTop:'30px'}}>
          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
        
@@ -110,6 +110,7 @@ export default function Contactus() {
         {/* ------------------------------------------------------------------------------------ */}
         {/* ------------------------ 2 MODAL IF NOT SIGN ------------------------------------------------ */}
 
+          </div>
         <div>
           {/* <Button onClick={handleOpen}>Open modal</Button> */}
           <Modal

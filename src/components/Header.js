@@ -31,7 +31,7 @@ export default function Header(props) {
 
     return (
         <div>
-            <div >
+            <div style={{backgroundColor:"white"}}>
 
                 {/* --------------------------------------------------------- */}
                 <MDBNavbar expand='lg' fixed className='bg-transparent shadow-1-strong text-dark text-danger' >

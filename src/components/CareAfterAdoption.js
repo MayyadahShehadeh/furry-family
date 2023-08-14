@@ -13,6 +13,7 @@ export class CareAfterAdoption extends Component {
   render() {
     return (
       <div>
+         <div style={{ backgroundColor: "white" }}>
         <Header />
         <div className='wrapperr3'>
 
@@ -113,6 +114,7 @@ export class CareAfterAdoption extends Component {
           </MDBCard>
         </div>
         <Footer />
+          </div>
       </div>
     )
   }
