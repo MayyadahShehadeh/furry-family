@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap");
 
-/* * {
-  padding: 0;
-  margin: 0;
-} */
-
-/* html {
-} */
 .avatar {
     vertical-align: middle;
     width: 50px;
@@ -18,13 +11,9 @@
     font-family: "Roboto", sans-serif;
     font-size: 12px;
   height: 100vh;
-  /* display: flex; */
   justify-content: center;
   align-items: center;
-  /* padding: 2rem; */
-  /* background: #1488cc;
-  background: -webkit-linear-gradient(to right, #2b32b2, #1488cc);
-  background: linear-gradient(to right, #2b32b2, #1488cc); */
+
 }
 
 .blog_post {
@@ -106,7 +95,4 @@
     background-color: black;
   }
 
-  /* .img_pod {
-
-  } */
 }

@@ -35,19 +35,19 @@ const Login = (props) => {
   }
 
   return (
-    <div class="wrapperr">
+    <div className="wrapperr">
       <br /><br /><br /><br /><br /><br />
-      <form class="form-signup" onSubmit={handleRegister}>
-        <h2 class="form-signup-heading" style={{ textAlign: 'center', paddingTop: '10px' }}>Signup</h2>
-        <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
-        <input type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
+      <form className="form-signup" onSubmit={handleRegister}>
+        <h2 className="form-signup-heading" style={{ textAlign: 'center', paddingTop: '10px' }}>Signup</h2>
+        <input type="text" className="form-control" name="username" placeholder="Username" required="" autofocus="" />
+        <input type="text" className="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
 
-        <input type="text" class="form-control" name="photoUrl" placeholder="photoUrl" required="" autofocus="" />
+        <input type="text" className="form-control" name="photoUrl" placeholder="photoUrl" required="" autofocus="" />
 
-        <input type="text" class="form-control" name="address" placeholder="address" required="" autofocus="" />
+        <input type="text" className="form-control" name="address" placeholder="address" required="" autofocus="" />
 
 
-        <input type="text" class="form-control" name="phone" placeholder="phone" required="" autofocus="" />
+        <input type="text" className="form-control" name="phone" placeholder="phone" required="" autofocus="" />
 
         <Form.Group controlId="role">
           {/* <Form.Label for="role" name="role">Role :</Form.Label> */}
@@ -87,25 +87,25 @@ const Login = (props) => {
                 {formErrorMessage.confirmPassword}
                 </FormHelperText>
                 </FormControl> */}
-        {/* <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
-        <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" /> */}
+        {/* <input type="text" className="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+        <input type="text" className="form-control" name="username" placeholder="Email Address" required="" autofocus="" /> */}
 
-        <input type="password" class="form-control" name="password" placeholder="Password" required=""
+        <input type="password" className="form-control" name="password" placeholder="Password" required=""
           error={!!formErrorMessage.confirmPassword} />
         <FormHelperText>
           {formErrorMessage.confirmPassword}
         </FormHelperText>
 
 
-        <input type="password" class="form-control" name="confirmPassword" placeholder="confirmPassword" required=""
+        <input type="password" className="form-control" name="confirmPassword" placeholder="confirmPassword" required=""
           error={!!formErrorMessage.confirmPassword} />
         <FormHelperText>
           {formErrorMessage.confirmPassword}
         </FormHelperText>
-        <label class="checkbox">
+        <label className="checkbox">
           <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe" /> Remember me
         </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit"
+        <button className="btn btn-lg btn-primary btn-block" type="submit"
           style={{ backgroundColor: '#ed1e4d', boxShadow: '#ed1e4d', msScrollbarShadowColor: '#ed1e4d' }}>signup</button>
         <div style={{ display: 'inline' }}>
           <p>Already Have an Account ?

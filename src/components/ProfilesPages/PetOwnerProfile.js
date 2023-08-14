@@ -176,7 +176,7 @@ export default function PetOwnerProfile() {
                       <Form.Control type="password" placeholder="Password" defaultValue={user.password} name="password" />
                     </Form.Group>
                     <br />
-                    <input type="submit" class="btn btn-primary btn-rounded   btn-sm"
+                    <input type="submit" className="btn btn-primary btn-rounded   btn-sm"
                       data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}
                       value="update" />
 
@@ -186,7 +186,7 @@ export default function PetOwnerProfile() {
 
 
                   {/* ------------------------- FILTER PETS --------------------- */}
-                  {/* <div className="row h-100 justify-content-center align-items-center" style={{ margin: '35px', marginTop: '100px' }}>
+                  {/* <div classNameName="row h-100 justify-content-center align-items-center" style={{ margin: '35px', marginTop: '100px' }}>
         <Form.Select aria-label="Default select example" name='petType2' 
       style={{ width: '50%' }} placeholder='choose pet'onChange={handleChange} */}
                   {/* > */}
@@ -245,7 +245,7 @@ export default function PetOwnerProfile() {
                         </Form.Control>
                       </Form.Group>
                       <br />
-                      <button type="submit" class="btn btn-primary btn-rounded   btn-sm"
+                      <button type="submit" className="btn btn-primary btn-rounded   btn-sm"
                         data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}
                       >
                         Add
@@ -282,7 +282,7 @@ export default function PetOwnerProfile() {
                                 <MDBCardBody>
                                   <MDBCardTitle>{item.name}</MDBCardTitle>
                                   <MDBCardTitle style={{ fontSize: '16px' }}>{item.description}</MDBCardTitle>
-                                  <button type="button" class="btn btn-primary btn-rounded   btn-sm"
+                                  <button type="button" className="btn btn-primary btn-rounded   btn-sm"
                                     data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}
                                     onClick={() => { petsContext.deletePet(item.id) }}>
                                     delete
@@ -291,7 +291,7 @@ export default function PetOwnerProfile() {
                                     delete
                                   </Button> */}
 
-                                  <button type="button" class="btn btn-primary btn-rounded   btn-sm"
+                                  <button type="button" className="btn btn-primary btn-rounded   btn-sm"
                                     data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}
                                     onClick={() => { updatCatHandler(item.id) }}>
                                     update
@@ -360,12 +360,12 @@ export default function PetOwnerProfile() {
                 <br />
 
                 <br />
-                <input type="submit" class="btn btn-primary btn-rounded   btn-sm"
+                <input type="submit" className="btn btn-primary btn-rounded   btn-sm"
                   data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}
                   value="update" onClick={handleClose} />
 
 
-                <button type="button" class="btn btn-primary btn-rounded   btn-sm"
+                <button type="button" className="btn btn-primary btn-rounded   btn-sm"
                   data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}
                   onClick={handleClose}>Close</button>
               </form>

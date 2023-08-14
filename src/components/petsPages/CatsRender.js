@@ -132,16 +132,16 @@ export default function DogsRenders() {
                   <MDBCard className='h-80' style={{ margin: '10px', width: "250px" }} key={idx}>
 
                     <div className='body22'>
-                      <div class="card22">
-                        <img src={item.photoUrl} alt="Avatar" class="avatar" />
+                      <div className="card22">
+                        <img src={item.photoUrl} alt="Avatar" className="avatar" />
                         <div>
-                          <div class="name22" >{item.petOwnerName}</div>
-                          {/* <div class="job">Frontend Developer</div> */}
+                          <div className="name22" >{item.petOwnerName}</div>
+                          {/* <div className="job">Frontend Developer</div> */}
                         </div>
                       </div>
                     </div>
 
-                    <div class="bg-image hover-zoom" style={{ margin: '10px 10px 0 10px' }}>
+                    <div className="bg-image hover-zoom" style={{ margin: '10px 10px 0 10px' }}>
                       <MDBCardImage
                         src={item.image_link}
                         alt='...'
@@ -158,13 +158,13 @@ export default function DogsRenders() {
                       <When condition={user.capabilities === 'read'}>
 
 
-                        <button type="button" class="btn btn-primary btn-rounded   btn-sm"
+                        <button type="button" className="btn btn-primary btn-rounded   btn-sm"
                           data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}
                           onClick={() => { ownerContactInformation(item.id) }}>
                           contact the owner
                         </button>
 
-                        <button type="button" class="btn btn-primary btn-rounded   btn-sm"
+                        <button type="button" className="btn btn-primary btn-rounded   btn-sm"
                           data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}
                           onClick={() => { addFavPet(item.id) }}>
                           add to favo
@@ -208,7 +208,7 @@ export default function DogsRenders() {
 
             <Link to="/profile">
 
-              <button type="button" class="btn btn-primary btn-rounded   btn-sm"
+              <button type="button" className="btn btn-primary btn-rounded   btn-sm"
                 data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}
               >
                 go chat {catOwnerName}

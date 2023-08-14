@@ -26,16 +26,16 @@ const Login = (props) => {
   return (
 
     <div>
-      <div class="wrapper">
+      <div className="wrapper">
 <br/><br/><br/><br/><br/><br/>
-    <form class="form-signin" onSubmit={handleLogin}>       
-      <h2 class="form-signin-heading" style={{textAlign:'center', paddingTop:'10px'}}> Login</h2>
-      <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
-      <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
-      <label class="checkbox">
+    <form className="form-signin" onSubmit={handleLogin}>       
+      <h2 className="form-signin-heading" style={{textAlign:'center', paddingTop:'10px'}}> Login</h2>
+      <input type="text" className="form-control" name="username" placeholder="Username" required="" autofocus="" />
+      <input type="password" className="form-control" name="password" placeholder="Password" required=""/>      
+      <label className="checkbox">
         <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"/> Remember me
       </label>
-      <button class="btn btn-lg btn-primary btn-block" type="submit" 
+      <button className="btn btn-lg btn-primary btn-block" type="submit" 
       style={{backgroundColor:'#ed1e4d',boxShadow:'#ed1e4d',msScrollbarShadowColor:'#ed1e4d'}}>Login</button>  
       <div style={{display:'inline'}}>
         <p>Don't Have an Account ?

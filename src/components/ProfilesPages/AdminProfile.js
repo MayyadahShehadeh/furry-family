@@ -116,18 +116,18 @@ export default function AdminProfile() {
 
             <MDBTabsItem>
               <MDBTabsLink onClick={() => handleIconsClick('tab3')} active={iconsActive === 'tab3'}>
-              <i class="fas fa-envelope"></i> Messages
+              <i className="fas fa-envelope"></i> Messages
               </MDBTabsLink>
             </MDBTabsItem>
           </MDBTabs>
 
           <MDBTabsContent>
             <MDBTabsPane show={iconsActive === 'tab1'}>
-            <section class="title container" style={{marginTop:'5px',marginBottom:'30px'}}>
-    {/* <div class="row"> */}
-        {/* <div class="col-md-12"> */}
+            <section className="title container" style={{marginTop:'5px',marginBottom:'30px'}}>
+    {/* <div className="row"> */}
+        {/* <div className="col-md-12"> */}
             <h1>All Users</h1>
-            <div class="seperator"></div>
+            <div className="seperator"></div>
          
         {/* </div> */}
     {/* </div> */}
@@ -141,9 +141,9 @@ export default function AdminProfile() {
                     <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
                       <ListItem alignItems="flex-start" key={idx}>
                       {user.photoUrl?(
-                      //  <div className='body22'>
-                       <div class="card22"> 
-                         <img src={user.photoUrl} alt="Avatar" class="avatar" style={{marginRight:'30px'}} />
+                      //  <div classNameName='body22'>
+                       <div className="card22"> 
+                         <img src={user.photoUrl} alt="Avatar" className="avatar" style={{marginRight:'30px'}} />
                          {/* <div> */}
                          
                          {/* </div> */}
@@ -181,7 +181,7 @@ export default function AdminProfile() {
                             </React.Fragment>
                           } />
 
-                        <button type="submit" class="btn btn-primary btn-rounded   btn-sm"
+                        <button type="submit" className="btn btn-primary btn-rounded   btn-sm"
                           data-mdb-ripple-color="#ffffff" style={{ backgroundColor: "#ec3257", margin: '5px' }}
                           onClick={() => { deleteUser(user.id) }}
                         >
