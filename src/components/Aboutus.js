@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './css/aboutus.css'
-import img1 from './images/myphoto.jpeg'
+import img1 from './images/unnamed.jpg'
 import Accordion from 'react-bootstrap/Accordion';
 import './css/Adoppro.css'
 import Footer from './Footer';
