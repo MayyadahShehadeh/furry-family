@@ -11,9 +11,9 @@ export class Aboutus extends Component {
   render() {
     return (
       <>
-        <div style={{ backgroundColor: "white" }}>
+        {/* <div style={{ backgroundColor: "white" }}> */}
           <Header />
-          <div>
+          <div className="bodyyyy">
             <div className='allConta'>
 
               {/* <!-- For demo purpose --> */}
@@ -70,7 +70,7 @@ export class Aboutus extends Component {
               </Accordion>
             </div>
           </div>
-        </div>
+        {/* </div> */}
         <Footer />
       </>
     )
